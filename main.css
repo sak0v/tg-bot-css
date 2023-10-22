@@ -5,57 +5,57 @@ body {
     justify-content: center;
     height: var(--tg-viewport-height);
     margin: 0;
-  }
-  
-  .form {
+}
+
+.form {
     background-color: black;
     border-radius: var(--tg-radius-m);
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
-    padding: var(--tg-space-m);
+    padding: var(--tg-space-s); /* Reduced padding for a more compact form */
     text-align: center;
     transition: box-shadow 0.3s ease;
-  }
+}
 
-  .title {
+.title {
     color: white;
-    font-family: var(--tg-font-family);
+    font-family: Verdana, sans-serif; /* Use Verdana font */
     font-size: var(--tg-font-size-title);
     text-align: center;
-    margin-bottom: 20px;
-  }
+    margin-bottom: 10px; /* Reduced margin for a more compact form */
+}
 
-  .input {
+.input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 16px;
+    padding: 8px; /* Reduced padding for input fields */
+    margin-bottom: 10px; /* Reduced margin for input fields */
+    font-size: 14px; /* Reduced font size for input fields */
     text-align: left;
     border: 1px solid #bdc3c7;
     border-radius: 5px;
     background-color: black;
     color: white;
-  }
+}
 
-  .submit {
+.submit {
     background-color: #4caf50;
     border: none;
     border-radius: var(--tg-radius-m);
     color: white;
     font-size: var(--tg-font-size-input);
     font-weight: bold;
-    padding: 12px 20px;
+    padding: 10px 20px; /* Reduced padding for the submit button */
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
-  .submit:hover {
+.submit:hover {
     background-color: #45a049;
-  }
+}
 
-  .error-message {
+.error-message {
     color: red;
-    font-size: 14px;
+    font-size: 12px; /* Reduced font size for error messages */
     margin-top: 1px;
-  }
+}
