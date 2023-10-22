@@ -1,0 +1,90 @@
+body {
+    background-color: var(--tg-theme-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--tg-viewport-height);
+    margin: 0;
+  }
+  
+  .form {
+    background-color: var(--tg-theme-bg-color);
+    border-radius: var(--tg-radius-m);
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--tg-space-m);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .info-button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .info-button {
+    background-color: var(--tg-theme-button-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--tg-theme-button-text-color);
+    font-size: 18px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .info-button:hover {
+    background-color: darken(var(--tg-theme-button-color), 10%);
+  }
+  
+  .title {
+    color: var(--tg-theme-text-color);
+    font-family: var(--tg-font-family);
+    font-size: var(--tg-font-size-title);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid var(--tg-theme-hint-color);
+    border-radius: 5px;
+  }
+  
+  .submit {
+    background-color: var(--tg-theme-button-color);
+    border: none;
+    border-radius: var(--tg-radius-m);
+    color: var(--tg-theme-button-text-color);
+    font-size: var(--tg-font-size-input);
+    font-weight: bold;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit:hover {
+    background-color: darken(var(--tg-theme-button-color), 10%);
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 1px;
+  }
+  
+  @media (max-width: 240px) {
+    .form {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: var(--tg-font-size-header);
+    }
+  }
+  
