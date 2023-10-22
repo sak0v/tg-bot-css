@@ -10,6 +10,7 @@ body {
 .form {
     background-color: black;
     border-radius: var(--tg-radius-m);
+    height: var(--tg-viewport-height);
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
