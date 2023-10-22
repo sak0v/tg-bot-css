@@ -60,3 +60,24 @@ body {
     font-size: 12px; /* Reduced font size for error messages */
     margin-top: 1px;
 }
+
+@media (max-width: 300px) {
+    .form {
+        max-width: 100%;
+        padding: var(--tg-space-s);
+        height: auto;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input {
+        padding: 8px;
+    }
+
+    .submit {
+        padding: 10px 20px;
+    }
+}
