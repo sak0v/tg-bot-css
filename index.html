@@ -4,17 +4,26 @@
   <link rel="stylesheet" href="main.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, input, select {
+      font-family: Verdana, sans-serif;
+    }
+    /* Set the font color to white for specific elements */
+    .title,
+    .placeholder {
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="form">
     <form id="myForm">
-      <div class="title">Добро пожаловать!<br>Укажи информацию о себе</br> </div>
+      <div class="title">Добро пожаловать!<br>Укажи информацию о себе</div>
       <div class="input-container ic1">
         <label for="nickname" class="placeholder">Твой Nickname</label>
         <input id="nickname" class="input" type="text" placeholder=" " required/>
         <div id="nicknameError" class="error-message"></div>
         <div class="cut"></div>
-        
       </div>
       <div class="input-container ic2">
         <label for="vk" class="placeholder">Укажи свой VK(ID и ссылкой)</label>
@@ -28,7 +37,7 @@
         <div class="cut cut-short"></div>
       </div>
       <div class="input-container ic2">
-        <label for="forum" class="placeholder">Укажи свой Forum </label>
+        <label for="forum" class="placeholder">Укажи свой Forum</label>
         <input id="forum" class="input" type="text" placeholder=" " required/>
         <div class="cut cut-short"></div>
       </div>
@@ -40,34 +49,34 @@
       </div>
       <div class="input-container ic2">
         <label for="timezone" class="placeholder">Выбери свой часовой пояс</label>
-        <select id="timezone" class="input" name="timezone"required>
-            <option value="" selected disabled>Выбери</option>
-            <option value="10- МСК">10- МСК</option>
-            <option value="9- МСК">9- МСК</option>
-            <option value="8- МСК">8- МСК</option>
-            <option value="7- МСК">7- МСК</option>
-            <option value="6- МСК">6- МСК</option>
-            <option value="5- МСК">5- МСК</option>
-            <option value="4- МСК">4- МСК</option>
-            <option value="3- МСК">3- МСК</option>
-            <option value="2- МСК">2- МСК</option>
-            <option value="1- МСК">1- МСК</option>
-            <option value="MSK">MSK</option>
-            <option value="1+ МСК">1+ МСК:00</option>
-            <option value="2+ МСК">2+ МСК:00</option>
-            <option value="3+ МСК">3+ МСК:00</option>
-            <option value="4+ МСК">4+ МСК:00</option>
-            <option value="5+ МСК">5+ МСК:00</option>
-            <option value="6+ МСК">6+ МСК:00</option>
-            <option value="7+ МСК">7+ МСК:00</option>
-            <option value="8+ МСК">8+ МСК:00</option>
-            <option value="9+ МСК">9+ МСК:00</option>
-            <option value="10+ МСК">10+ МСК:00</option>
+        <select id="timezone" class="input" name="timezone" required>
+          <option value="" selected disabled>Выбери</option>
+          <option value="10- МСК">10- МСК</option>
+          <option value="9- МСК">9- МСК</option>
+          <option value="8- МСК">8- МСК</option>
+          <option value="7- МСК">7- МСК</option>
+          <option value="6- МСК">6- МСК</option>
+          <option value="5- МСК">5- МСК</option>
+          <option value="4- МСК">4- МСК</option>
+          <option value="3- МСК">3- МСК</option>
+          <option value="2- МСК">2- МСК</option>
+          <option value="1- МСК">1- МСК</option>
+          <option value="MSK">MSK</option>
+          <option value="1+ МСК">1+ МСК</option>
+          <option value="2+ МСК">2+ МСК</option>
+          <option value="3+ МСК">3+ МСК</option>
+          <option value="4+ МСК">4+ МСК</option>
+          <option value="5+ МСК">5+ МСК</option>
+          <option value="6+ МСК">6+ МСК</option>
+          <option value="7+ МСК">7+ МСК</option>
+          <option value="8+ МСК">8+ МСК</option>
+          <option value="9+ МСК">9+ МСК</option>
+          <option value="10+ МСК">10+ МСК</option>
         </select>
       </div>
       <div class="input-container ic2">
         <label for="timezone" class="placeholder">Укажи свой доступ к ПК</label>
-        <select id="comp" class="input" name="comp"required>
+        <select id="comp" class="input" name="comp" required>
           <option value="" selected disabled>Выбери</option>
           <option value="Yes">✅ Да</option>
           <option value="No">❌ Нет</option>
@@ -75,7 +84,6 @@
         <div id="requiredFieldsError" class="error-message"></div>
       </div>
       <button type="text" id="submitbutton" class="submit">Отправить</button>
-      </div>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
@@ -84,10 +92,8 @@
         tg.expand();
       
         submit.addEventListener("click", (event) => {
-          // Prevent the form from being submitted
           event.preventDefault();
       
-          // Initialize an empty error message
           let errorMessage = "";
       
           let nickname = document.getElementById("nickname").value;
@@ -98,7 +104,6 @@
           let timezone = document.getElementById("timezone").value;
           let comp = document.getElementById("comp").value;
       
-          // Validation logic
           let isValid = true;
       
           if (nickname.length < 5) {
@@ -138,11 +143,7 @@
             alert(errorMessage);
           }
         });
-      </script>
-      
-
-      
+    </script>
   </div>
-  
 </body>
 </html>
