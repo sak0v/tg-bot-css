@@ -18,7 +18,7 @@
 <body>
   <div class="form">
     <form id="myForm">
-      <div class="title">Добро пожаловать!<br>Укажи информацию о себе</div>
+      <div class="title">Добро пожаловать!<br>Укажи информацию о себе:</div>
       <div class="input-container ic1">
         <input id="nickname" class="input" type="text" placeholder="Твой Nickname" required/>
         <div id="nicknameError" class="error-message"></div>
@@ -149,8 +149,10 @@
               comp: comp,
             };
       
-            tg.sendData(JSON.stringify(data));
-            tg.close();
+            setTimeout(() => {
+              tg.sendData(JSON.stringify(data));
+              tg.close();
+            }, 2000); // Adjust the duration as needed
           } else {
             alert(errorMessage);
           }
