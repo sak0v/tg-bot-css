@@ -134,6 +134,11 @@
             errorMessage += "Заполни всю информацию.\n";
             isValid = false;
           }
+          if (forum && !forum.startsWith("https://")) {
+            errorMessage += "Forum должен начинаться с 'https://'.\n";
+            isValid = false;
+          }
+
       
           if (isValid) {
             submit.style.display = "none";
